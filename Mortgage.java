@@ -6,65 +6,55 @@
 */
 import java.text.DecimalFormat;
 
-public class Mortgage
-{
+public class Mortgage {
+
   private double annualInterestRate;
   private int numOfYears;
   private double loanAmount;
   private double monthlyPayment;
   private double totalPayment;
 
-  // Default constructor - sets a 100,000 loan at 5.5% for 15 years
-  // Used for Advertised Promotion
-  public Mortgage()
-  { this (5.5, 15, 100000);			// calls 3-arg constructor below
+ 
+  public Mortgage(){ // Default constructor - sets a 100,000 loan at 5.5% for 15 years Used for Advertised Promotion
+   this (5.5, 15, 100000);			// calls 3-arg constructor below
   } // end Mortgage() constructor
 
-  // Construct a mortgage with specified annual interest rate,
-  // number of years and loan amount
-  public Mortgage(double newInterestRate, int newNumOfYears,
-                  double newLoanAmount)
-  { annualInterestRate = newInterestRate;
+  
+  public Mortgage(double newInterestRate, int newNumOfYears,double newLoanAmount) { // Construct a mortgage with specified annual interest rate, number of years and loan amount
+    annualInterestRate = newInterestRate;
     numOfYears = newNumOfYears;
     loanAmount = newLoanAmount;
   } // end 3-argument constructor
 
 
 // ------------------ Monthly Payment ---------------------
-  // returns the value for the private data property monthlyPayment
-  // currently not used...
-  public double getMonthlyPayment()
-  { return 	monthlyPayment;
+  public double getMonthlyPayment() { // returns the value for the private data property monthlyPayment currently not used...
+  return 	monthlyPayment;
   } // end getMonthlyPayment
 
-  // Calculate and set the monthly payment for the loan
-  public void setMonthlyPayment()
-  { double monthlyInterestRate = annualInterestRate/1200;
-
-	monthlyPayment = loanAmount*monthlyInterestRate/
-      (1 - (Math.pow(1/(1 + monthlyInterestRate), numOfYears*12)));
+  
+  public void setMonthlyPayment() { // Calculate and set the monthly payment for the loan
+    double monthlyInterestRate = annualInterestRate/1200;
+    monthlyPayment = loanAmount*monthlyInterestRate/(1 - (Math.pow(1/(1 + monthlyInterestRate), numOfYears*12)));
   } // end setMonthlyPayment
 
 
-// ------------------ Total Payment ---------------------
-  // returns the value for the private data property totalPayment
-  // currently not used...
-  public double getTotalPayment()
-  { return 	totalPayment;
+// ------------------ Total Payment --------------------- 
+  public double getTotalPayment() { // returns the value for the private data property totalPayment currently not used...
+    return 	totalPayment;
   } // end getMonthlyPayment
 
-  // Calculate and set the total amount to be paid on the loan
-  public void setTotalPayment()
-  { totalPayment = monthlyPayment * numOfYears * 12;
+  
+  public void setTotalPayment() { // Calculate and set the total amount to be paid on the loan
+    totalPayment = monthlyPayment * numOfYears * 12;
   } // end totalPayment
 
 
 // ------------------ Used to Display Output ---------------------
-  public String toString()
-  { DecimalFormat df = new DecimalFormat("$#,###,###.00");
-	String s = "The monthly payment is " + df.format(monthlyPayment) +
-			   "\nThe total payment is " + df.format(totalPayment) + "\n";
-	return s;
+  public String toString() { 
+    DecimalFormat df = new DecimalFormat("$#,###,###.00");
+    String s = "The monthly payment is " + df.format(monthlyPayment) + "\nThe total payment is " + df.format(totalPayment) + "\n"; 
+    return s;
   } // end toString
 
 } // end class
