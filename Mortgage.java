@@ -29,6 +29,7 @@ public class Mortgage {
 
 // ------------------ Monthly Payment ---------------------
   public double getMonthlyPayment() { // returns the value for the private data property monthlyPayment currently not used...
+  
   return 	monthlyPayment;
   } // end getMonthlyPayment
 

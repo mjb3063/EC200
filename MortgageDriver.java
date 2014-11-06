@@ -10,25 +10,26 @@ import java.util.*;
 
 
 public class MortgageDriver {
-	public static void main (Strings[] args) {
+	public static void main (String [] args) {
 
-menuInput = keyboard.nextLine().charAt(0); // this comes from IO
+	Bank_ConsoleIO io = new Bank_ConsoleIO ();
+	Mortgage mortgage = new Mortgage ();
+
+	io.welcomeScreen();
+	char menuinput = io.menuScreen();
 	switch (menuInput){
 		case 'P':
 		case 'p':
-	//IO	System.out.println("\nYou have chosen to take advantage of our promotional offer.\n");
-	//IO	//System.out.print("Your promotional loan amount is : $" + promotionalLoanAmount + "\n");
-	//IO	//System.out.print("Your promotional interest rate is : " + promotionalInterest + "\n");
-	//IO	//System.out.print("Your promotional loan term is : " + promotionalYears + "\n");
-	//MO	monthlyPayment = monthlyPayment (promotionalLoanAmount, promotionalInterest, promotionalYears); // mortgage obj 
-	//MO	totalLoanAmount = totalPayment(monthlyPayment, promotionalYears);
-	//IO	paymentDisplay(userID, promotionalLoanAmount, promotionalYears, promotionalInterest, monthlyPayment, totalLoanAmount);
-	//IO	paymentTextWrite(userID, promotionalLoanAmount, promotionalYears, promotionalInterest, monthlyPayment, totalLoanAmount);
-	//IO	endProgram = endScreen();
-			invalidInput = 0;
+			io.promotionalLoanDetails();
+			monthlyPayment = monthlyPayment (promotionalLoanAmount, promotionalInterest, promotionalYears); // mortgage obj 
+			totalLoanAmount = totalPayment(monthlyPayment, promotionalYears);
+			paymentDisplay(userID, promotionalLoanAmount, promotionalYears, promotionalInterest, monthlyPayment, totalLoanAmount);
+			paymentTextWrite(userID, promotionalLoanAmount, promotionalYears, promotionalInterest, monthlyPayment, totalLoanAmount);
+			endProgram = endScreen();
 			break;
 		case 'N':
 		case 'n':
+/*
 			userID = userIDVerification();		
 			System.out.println("\nYou have chosen to apply for a non-promotional individual loan.");
 			npInterestRate = interestRateVerification();
@@ -55,12 +56,12 @@ menuInput = keyboard.nextLine().charAt(0); // this comes from IO
 } while (invalidInput == 1); //closes menu execution do
 } while (endProgram == 0); //closes the program loop do
 } // closes main
-
+*/
 
 
 
 	} // closes main
-} // closes Controler
+} // closes Mortgage driver
 
 
 
