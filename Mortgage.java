@@ -26,11 +26,22 @@ public class Mortgage {
     loanAmount = newLoanAmount;
   } // end 3-argument constructor
 
+  public void setInterestRate (double interestRate) {
+    annualInterestRate = interestRate;
+  }
+
+  public void setLoanAmount (double amount) {
+    loanAmount = amount;
+  }
+
+  public void setLoanLength (int length) {
+    numOfYears= length;
+  }
+
 
 // ------------------ Monthly Payment ---------------------
   public double getMonthlyPayment() { // returns the value for the private data property monthlyPayment currently not used...
-  
-  return 	monthlyPayment;
+    return 	monthlyPayment;
   } // end getMonthlyPayment
 
   
@@ -54,7 +65,9 @@ public class Mortgage {
 // ------------------ Used to Display Output ---------------------
   public String toString() { 
     DecimalFormat df = new DecimalFormat("$#,###,###.00");
-    String s = "The monthly payment is " + df.format(monthlyPayment) + "\nThe total payment is " + df.format(totalPayment) + "\n"; 
+    DecimalFormat dfInterest = new DecimalFormat ("#.##");
+    String s = "***********************************REPORT***********************************" + 
+    "\n\nThe loan amount is: " + df.format(loanAmount) + "\nThe interestRate is: " + dfInterest.format(annualInterestRate) + "%\nThe monthly payment is " + df.format(monthlyPayment) + "\nThe total payment is " + df.format(totalPayment) + "\n\n\n\n"; 
     return s;
   } // end toString
 

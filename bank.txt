@@ -1,8 +1,24 @@
+The loan amount is: $100,000.00
+The interestRate is: 5.5%
+The monthly payment is $817.08
+The total payment is $147,075.02
+The loan amount is: $100,000.00
+The interestRate is: 5.5%
+The monthly payment is $817.08
+The total payment is $147,075.02
+***********************************REPORT***********************************The loan amount is: $100,000.00
+The interestRate is: 5.5%
+The monthly payment is $817.08
+The total payment is $147,075.02
 
-************************ Loan Summary ****************************
-                 Customer ID: 1234
-                 Loan amount: $200,000
-          Length of the loan: 20 years
-          Loan Interest Rate: 3.75%
-            Monthly payments: $1,185.78
-           Total loan amount: $284,586.39
+
+
+***********************************REPORT***********************************
+
+The loan amount is: $100,000.00
+The interestRate is: 5.5%
+The monthly payment is $817.08
+The total payment is $147,075.02
+
+
+
